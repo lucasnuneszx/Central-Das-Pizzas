@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession(authOptions)
     
-    if (!session || ![UserRole.ADMIN, UserRole.MANAGER].includes(session.user.role)) {
+    if (!session || ![UserRole.ADMIN, UserRole.MANAGER].includes(session.user.role as any)) {
       return NextResponse.json({ message: 'Acesso negado' }, { status: 403 })
     }
 
@@ -51,7 +51,7 @@ export async function GET() {
   try {
     const session = await getServerSession(authOptions)
     
-    if (!session || ![UserRole.ADMIN, UserRole.MANAGER].includes(session.user.role)) {
+    if (!session || ![UserRole.ADMIN, UserRole.MANAGER].includes(session.user.role as any)) {
       return NextResponse.json({ message: 'Acesso negado' }, { status: 403 })
     }
 

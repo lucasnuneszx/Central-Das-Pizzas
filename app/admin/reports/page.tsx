@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -43,9 +43,9 @@ export default function AdminReports() {
 
   useEffect(() => {
     fetchReportData()
-  }, [dateRange])
+  }, [dateRange, fetchReportData])
 
-  const fetchReportData = async () => {
+  const fetchReportData = useCallback(async () => {
     try {
       setIsLoading(true)
       const response = await fetch(`/api/reports?start=${dateRange.start}&end=${dateRange.end}`)
@@ -56,7 +56,7 @@ export default function AdminReports() {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [dateRange.start, dateRange.end])
 
   const exportReport = async (format: 'csv' | 'pdf') => {
     try {
