@@ -41,7 +41,12 @@ export default function Checkout() {
   const [isLoading, setIsLoading] = useState(false)
   const [showAddressForm, setShowAddressForm] = useState(false)
   
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    deliveryType: DeliveryType
+    paymentMethod: PaymentMethod
+    selectedAddressId: string
+    notes: string
+  }>({
     deliveryType: DeliveryType.DELIVERY,
     paymentMethod: PaymentMethod.PIX,
     selectedAddressId: '',
