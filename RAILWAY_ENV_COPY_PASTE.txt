@@ -1,0 +1,102 @@
+============================================
+VARIÁVEIS DE AMBIENTE PARA RAILWAY
+============================================
+Copie e cole no Railway:
+Serviço "web" → Variables → New Variable
+============================================
+
+OBRIGATÓRIAS:
+-------------
+
+DATABASE_URL
+[Obter do banco PostgreSQL do Railway]
+Formato: postgresql://postgres:senha@host:port/database?sslmode=require
+
+NEXTAUTH_URL
+https://www.centraldaspizzas.com
+
+NEXTAUTH_SECRET
+[Gerar com: openssl rand -base64 32]
+
+OBRIGATÓRIAS PARA MILA (WhatsApp/IA):
+-------------------------------------
+
+OPENAI_API_KEY
+sk-proj-your-openai-api-key-here
+
+EVOLUTION_API_URL
+https://api.evolution-api.com
+
+EVOLUTION_API_KEY
+[sua-evolution-api-key-aqui]
+
+EVOLUTION_INSTANCE_NAME
+central-das-pizzas
+
+WHATSAPP_WEBHOOK_TOKEN
+[Gerar com: openssl rand -hex 32]
+
+OPCIONAIS:
+----------
+
+IFOOD_API_URL
+https://api.ifood.com.br
+
+IFOOD_API_KEY
+[sua-ifood-api-key]
+
+IFOOD_MERCHANT_ID
+[seu-merchant-id]
+
+CLOUDINARY_CLOUD_NAME
+[seu-cloud-name]
+
+CLOUDINARY_API_KEY
+[sua-api-key]
+
+CLOUDINARY_API_SECRET
+[seu-api-secret]
+
+PRINTER_IP
+192.168.1.100
+
+PRINTER_PORT
+9100
+
+RESTAURANT_NAME
+Central das Pizzas Av Sul
+
+RESTAURANT_ADDRESS
+Av. Sul, 104 - Verdes Horizontes, Camaçari - BA, 42810-021
+
+RESTAURANT_PHONE
+(71) 99156-5893
+
+RESTAURANT_EMAIL
+contato@centraldaspizzas.com
+
+DELIVERY_ESTIMATE
+35 - 70min
+
+OPENING_HOURS
+Seg-Dom: 18h-23h
+
+DELIVERY_FEE
+5.00
+
+MIN_ORDER_VALUE
+25.00
+
+============================================
+INSTRUÇÕES:
+============================================
+
+1. Acesse: https://railway.app/dashboard
+2. Selecione seu projeto
+3. Clique no serviço "web"
+4. Aba "Variables"
+5. New Variable → Adicione cada uma acima
+6. Após adicionar todas, faça Redeploy
+
+============================================
+
