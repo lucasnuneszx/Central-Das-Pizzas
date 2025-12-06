@@ -22,8 +22,10 @@
 5. **Nome**: `DATABASE_URL`
 6. **Valor**: Cole exatamente esta URL (sem espaços, sem quebras de linha):
    ```
-   postgresql://postgres:ugxyXIugb1BPQu0nDiEpEegPNTU1FyGMx@metro.proxy.rlwy.net:22809/railway
+   postgresql://postgres:ugxyXIugblBPQunDiEpEegPNTUlFyGMx@metro.proxy.rlwy.net:22809/railway
    ```
+   
+   ⚠️ **SENHA CORRETA**: `ugxyXIugblBPQunDiEpEegPNTUlFyGMx`
 7. **Salve**
 
 ⚠️ **IMPORTANTE**: 
