@@ -41,7 +41,7 @@ Certifique-se de que estas variáveis estão configuradas:
 
 ## 🚀 Após o Deploy
 
-Acesse: `https://centraldaspizzas.up.railway.app/auth/signin`
+Acesse: `https://centraldaspizzassul.up.railway.app/auth/signin`
 
 Você deve ver:
 - `v5.3 - JWT Auth System - NO CACHE`

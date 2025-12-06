@@ -2,7 +2,7 @@
 
 ## 1. Verificar Healthcheck
 
-Acesse: `https://centraldaspizzas.up.railway.app/api/health`
+Acesse: `https://centraldaspizzassul.up.railway.app/api/health`
 
 **Se o deploy foi aplicado, você verá:**
 ```json
@@ -32,7 +32,7 @@ Acesse: `https://centraldaspizzas.up.railway.app/api/health`
 
 ### Teste `/api/login`:
 ```bash
-POST https://centraldaspizzas.up.railway.app/api/login
+POST https://centraldaspizzassul.up.railway.app/api/auth/login
 Content-Type: application/json
 
 {
@@ -46,7 +46,7 @@ Content-Type: application/json
 
 ### Teste `/api/me`:
 ```bash
-GET https://centraldaspizzas.up.railway.app/api/me
+GET https://centraldaspizzassul.up.railway.app/api/auth/me
 ```
 
 **Se funcionar:** Retornará `{"authenticated": false, ...}` ou `{"authenticated": true, "user": {...}}`
